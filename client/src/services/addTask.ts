@@ -11,6 +11,12 @@ export const addTask = async ({
   assigned_to: string;
   expires_at: string;
 }) => {
+  console.log({
+    title,
+    created_by,
+    expires_at,
+    assigned_to,
+  });
   try {
     const task = await axios.post("http://localhost:8080/addTask", {
       title,

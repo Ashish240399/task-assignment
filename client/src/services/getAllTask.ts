@@ -14,16 +14,16 @@ export const getAllTask = async ({
   try {
     let url = "http://localhost:8080/getAllTasks?";
     if (status) {
-      url += "status=" + status;
+      url += "status=" + status + "&";
     }
     if (created_by) {
-      url += "createdBy=" + created_by;
+      url += "created_by=" + created_by + "&";
     }
     if (assigned_to) {
-      url += "assignedTo=" + assigned_to;
+      url += "assigned_to=" + assigned_to + "&";
     }
     if (search) {
-      url += "search=" + search;
+      url += "search=" + search + "&";
     }
     const response = await axios.get(url);
     return response.data;
